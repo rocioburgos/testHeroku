@@ -15,31 +15,33 @@
 
 <h1>{{titulo}}</h1>
 
-<form >
+
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Edad Uno</span>
   </div>
-  <input type="number" class="form-control"aria-describedby="basic-addon1" name="uno" #uno>
+  <input type="text" class="form-control"aria-describedby="basic-addon1"  [(ngModel)]="uno">
 </div>
  
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Edad dos</span>
   </div>
-  <input type="number" class="form-control"aria-describedby="basic-addon1" name="dos" #dos>
+  <input type="text" class="form-control"aria-describedby="basic-addon1" [(ngModel)]="dos">
 </div>
    
   <button  (click) = "Limpiar()" class="btn btn-primary" type="reset">Limpiar</button>
-  <button (click)="Calcular(uno.value, dos.value)" class="btn btn-primary" >Calcular</button>
+  <button (click)="Calcular()" class="btn btn-primary" >Calcular</button>
  
- </form>
 
-<label for="">
-  {{promedio }}
-</label>
 
-<label for="">{{suma}}</label>
+ 
+  <div class="alert alert-primary" role="alert">
+    Suma: <a href="#" class="alert-link">{{suma}}</a> 
+  </div>
+<div class="alert alert-primary" role="alert">
+    Promedio: <a href="#" class="alert-link">{{promedio }}</a>
+  </div>
 
 
 </body>

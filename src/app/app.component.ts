@@ -7,28 +7,27 @@ import { unsupported } from '@angular/compiler/src/render3/view/util';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent    {
-  titulo:string = 'Ciclo de vida';
-   promedio:number =0;
-   suma :number =0;
-   uno;
-   dos;
+ public titulo:string = 'Ciclo de vida';
+ public promedio:string ='';
+ public  suma :string ='';
+ public uno:string;
+ public dos:string;
   constructor(){}
    
+  ngOnInit() {
+  }
+
    Limpiar(){
-     this.uno='';
-     this.dos='';
+     this.uno="";
+     this.suma="";
+     this.promedio= "";
+     this.dos="";
    }
 
-  Calcular( uno:number, dos:number ){
+  Calcular( ){
     
-    uno = parseInt(''+uno);
-    dos = parseInt(''+dos);
-
-    this.suma = uno + dos;
-    this.promedio = (uno + dos )/2;
-
-    //console.log(uno *2);
-    console.log(typeof(parseInt( ''+dos) ) , typeof(uno), uno);
-    console.log(typeof(parseInt( ''+dos) ) , typeof(dos), dos);
+    this.suma =   (parseInt(''+this.uno) + parseInt(''+this.dos)).toString();
+    this.promedio = ((parseInt(''+this.uno) + parseInt(''+this.dos) )/2).toString();
+    
   }
 }
