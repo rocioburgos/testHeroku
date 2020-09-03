@@ -1,1 +1,45 @@
-<h1>hola</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ciclo de vida</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+ 
+
+</head>
+<body>
+  
+
+<h1>{{titulo}}</h1>
+
+<form >
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Edad Uno</span>
+  </div>
+  <input type="number" class="form-control"aria-describedby="basic-addon1" name="uno" #uno>
+</div>
+ 
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Edad dos</span>
+  </div>
+  <input type="number" class="form-control"aria-describedby="basic-addon1" name="dos" #dos>
+</div>
+   
+  <button  (click) = "Limpiar()" class="btn btn-primary" type="reset">Limpiar</button>
+  <button (click)="Calcular(uno.value, dos.value)" class="btn btn-primary" >Calcular</button>
+ 
+ </form>
+
+<label for="">
+  {{promedio }}
+</label>
+
+<label for="">{{suma}}</label>
+
+
+</body>
