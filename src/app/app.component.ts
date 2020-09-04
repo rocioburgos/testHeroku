@@ -17,17 +17,17 @@ export class AppComponent    {
   ngOnInit() {
   }
 
-   Limpiar(){
+/*   Limpiar(){
      this.uno="";
      this.suma="";
      this.promedio= "";
      this.dos="";
    }
 
-  Calcular( ){
+  Calcular(){
     
     this.suma =   (parseInt(''+this.uno) + parseInt(''+this.dos)).toString();
     this.promedio = ((parseInt(''+this.uno) + parseInt(''+this.dos) )/2).toString();
     
-  }
+  }*/
 }
